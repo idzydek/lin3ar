@@ -1,53 +1,23 @@
-# Byte-compiled / optimized / DLL files
+.venv/
+env/
+venv/
+
 __pycache__/
 *.py[cod]
 *$py.class
 
-# Distribution / packaging
+.pytest_cache/
+
+.vscode/
+.idea/
+
 build/
 dist/
 *.egg-info/
-.eggs/
-*.egg
 
-# Installer logs
-pip-log.txt
-pip-delete-this-directory.txt
-
-# Virtual environments
-.venv/
-venv/
-ENV/
-env/
-
-# Jupyter Notebook checkpoints
-.ipynb_checkpoints/
-
-# VSCode / IDE stuff
-.vscode/
-.idea/
-*.code-workspace
-
-# System files
-.DS_Store
-Thumbs.db
-
-# PyTest cache
-.pytest_cache/
-
-# Test coverage reports
-htmlcov/
-coverage.xml
-.cache
-
-# Logs
 *.log
+*.tmp
 
-# MyPy
-.mypy_cache/
+.DS_Store
 
-# PyInstaller
-*.spec
-
-# Secret config (optional, just in case)
-.env
+Thumbs.db

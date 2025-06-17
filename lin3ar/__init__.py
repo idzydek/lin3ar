@@ -1,2 +1,2 @@
-def hello():
-    return "lin3ar placeholder"
+from .regression import LinearRegression
+# from .logistic import LogisticRegression
