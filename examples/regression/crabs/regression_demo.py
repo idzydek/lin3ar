@@ -1,4 +1,5 @@
 import pandas as pd
+import numpy as np
 from lin3ar.regression import LinearRegression
 
 # Load and preprocess crab age dataset
@@ -19,9 +20,10 @@ y = df["Wiek"].astype(float)
 X["Waga BS"] = X["Waga BS"] / X["Waga"]
 X["Waga WN"] = X["Waga WN"] / X["Waga"]
 X["Waga SK"] = X["Waga SK"] / X["Waga"]
+X = pd.DataFrame(X)
 X = X.rename(columns={"Waga BS": "BS/Waga", "Waga WN": "WN/Waga", "Waga SK": "SK/Waga"})
 
 model = LinearRegression(solver="ls")
 model.fit(X, y)
 ypred = model.predict(X)
-model.evaluate_regression(y, ypred)
+model.evaluate_regression(np.array(y), ypred)
