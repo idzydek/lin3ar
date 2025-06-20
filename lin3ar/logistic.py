@@ -32,4 +32,5 @@ class LogisticRegression(BaseRegressor):
 #         raise ValueError("Model not fitted yet!")
 #     X = np.c_[np.ones((X.shape[0], 1)), X]
 #     y_pred = self.sigmoid(X @ self.weights)
-#     return (y_pred >= threshold).astype(int)
+    # return (y_pred >= threshold).astype(int)
+    return

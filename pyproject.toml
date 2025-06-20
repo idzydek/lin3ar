@@ -6,3 +6,6 @@ build-backend = "setuptools.build_meta"
 name = "lin3ar"
 version = "0.1"
 dependencies = []
+
+[tool.pytest.ini_options]
+addopts = "-q -v --tb=short"
