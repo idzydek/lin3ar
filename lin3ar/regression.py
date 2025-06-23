@@ -47,7 +47,7 @@ class LinearRegression(BaseRegressor):
         if self.penalty == 'l1':
           regularization_term = np.sign(self.weights) * self.lambda_
         elif self.penalty == 'l2':
-          regularization_term = self.lambda_ * self.weights
+          regularization_term = 2 * self.lambda_ * self.weights
         else:
           regularization_term = 0
         regularization_term[0] = 0
