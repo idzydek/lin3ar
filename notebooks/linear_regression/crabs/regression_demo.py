@@ -23,7 +23,7 @@ X["Waga SK"] = X["Waga SK"] / X["Waga"]
 X = pd.DataFrame(X)
 X = X.rename(columns={"Waga BS": "BS/Waga", "Waga WN": "WN/Waga", "Waga SK": "SK/Waga"})
 
-model = LinearRegression(solver="ls")
+model = LinearRegression(solver="ls", lambda_=100)
 model.fit(X, y)
 ypred = model.predict(X)
 model.evaluate_regression(np.array(y), ypred)
